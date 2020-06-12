@@ -119,6 +119,21 @@ public class TrabalhoFinal {
         System.out.println(
                 "O valor total do uso do carro de placa " + placa + " foi de R$" + String.format("%.2f", total));
 
+
+        String vaga = "E120";
+        Vaga v1 = vagas.pesquisar(vaga);
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataInicio = dateFormat.parse("12/06/2012");
+        Date dataFim = dateFormat.parse("20/08/2015");
+
+        //v1.listarUso(dataInicio, dataFim);
+
+        vagas.listarHistorico();
+
+
+        
+
         System.out.println('x');
 
     }

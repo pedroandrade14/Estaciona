@@ -33,4 +33,10 @@ public class HashVagas {
         }
         return null;
     }
+
+    public void listarHistorico(){
+        for (int i = 0; i < tabelaVagas.length; i++) {
+            tabelaVagas[i].imprimir();
+        }
+    }
 }

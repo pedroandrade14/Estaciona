@@ -43,6 +43,7 @@ public class ListaLinearVaga {
         else {
             ElementoVaga aux = this.primeiro.prox;
             while (aux != null) {
+                aux.elemento.listarUsoTotal();
                 aux = aux.prox;
             }
         }

@@ -48,14 +48,14 @@ public class ListaUso {
             String out = "";
 
             while (aux != null) {
-                out = out + "R$ " + String.format("%.2f", aux.elemento.valor)+ '\n';
-                System.out.println("Valores de uso do carro: "+ aux.elemento.placa +'\n' + out);
+                out = out + "R$ " + String.format("%.2f", aux.elemento.valor) + '\n';
+                System.out.println("Valores de uso do carro: " + aux.elemento.placa + '\n' + out);
                 aux = aux.prox;
             }
         }
     }
 
-    public int contador(){
+    public int contador() {
         if (this.vazia())
             return 0;
         else {
@@ -67,6 +67,20 @@ public class ListaUso {
                 aux = aux.prox;
             }
             return contador;
+        }
+    }
+
+    public String listaFormatada() {
+        String output = "";
+        if (this.vazia())
+            return "";
+        else {
+            ElementoUso aux = this.primeiro.prox;
+            while (aux != null) {
+                output =  output + "\n Placa: " + aux.elemento.placa + " - Hora Entrada: " + aux.elemento.horaEntrada;
+                aux = aux.prox;
+            }
+            return output;
         }
     }
 }
