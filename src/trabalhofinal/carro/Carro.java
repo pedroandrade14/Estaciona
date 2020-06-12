@@ -24,4 +24,17 @@ public class Carro {
         ElementoUso inserido = this.paradas.adicionaFinal(uso);
         return inserido.elemento;
     }
+
+    public double totalUso() {
+        return this.paradas.totalUso();
+    }
+
+    public void imprimirUsos(){
+        this.paradas.valoresUso();
+    }
+
+    public int qtdUso(){
+        return this.paradas.contador();
+    }
+
 }

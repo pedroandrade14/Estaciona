@@ -4,12 +4,12 @@ import java.util.Random;
 import java.util.Date;
 
 public class Uso {
-    int idUso;
-    String placa;
-    String idVaga;
-    Date horaEntrada;
-    Date horaSaida;
-    Double valor;
+    public int idUso;
+    public String placa;
+    public String idVaga;
+    public Date horaEntrada;
+    public Date horaSaida;
+    public Double valor;
 
     public Uso(){
         this.idUso = 0;

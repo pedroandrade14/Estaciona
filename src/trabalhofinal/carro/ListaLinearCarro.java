@@ -17,22 +17,18 @@ public class ListaLinearCarro {
             return false;
     }
 
-    public void inserir(ElementoCarro produtoNovo) {
-        this.ultimo.prox = produtoNovo;
-        this.ultimo = produtoNovo;
+    public void inserir(ElementoCarro carroNovo) {
+        this.ultimo.prox = carroNovo;
+        this.ultimo = carroNovo;
     }
 
     public ElementoCarro pesquisar(String placa) {
-        int comparacoes = 0;
-
         if (this.vazia())
             return null;
         else {
             ElementoCarro aux = this.primeiro.prox;
 
             while (aux != null) {
-                comparacoes++;
-
                 if (aux.elemento.placa.equals(placa)) {
                     return aux;
                 } else
@@ -48,8 +44,9 @@ public class ListaLinearCarro {
         else {
             ElementoCarro aux = this.primeiro.prox;
             while (aux != null) {
-                //System.out.println("Nome do produto: " + aux.nome + " - Código de barras do produto: "
-                        //+ aux.codigoBarras + " - Preço unitário do produto: " + aux.precoUnitario);
+                // System.out.println("Nome do produto: " + aux.nome + " - Código de barras do
+                // produto: "
+                // + aux.codigoBarras + " - Preço unitário do produto: " + aux.precoUnitario);
                 aux = aux.prox;
             }
         }
